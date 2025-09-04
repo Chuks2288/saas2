@@ -1,9 +1,9 @@
-import React from 'react'
+import { noSessionRedirect } from "@/lib/session";
+import React from "react";
 
-const Page = () => {
-    return (
-        <div>Meetings Page</div>
-    )
-}
+const Page = async () => {
+  const session = await noSessionRedirect();
+  return <div>Meetings Page</div>;
+};
 
-export default Page
+export default Page;
